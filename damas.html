@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividamente - Damas Cognitivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" aria-label="Vividamente - Início">
+      <img src="assets/logo-vividamente.png" alt="">
+      <span>Vividamente</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="progresso.html">Progresso</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="ajuda.html">Ajuda</a></li>
+        <li><a href="avaliacao.php">Avaliação</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <a href="jogos.html" class="btn back-btn">Voltar</a>
+      <section class="checkers-layout" aria-labelledby="checkers-title">
+        <div class="card checkers-info">
+          <h1 id="checkers-title">Damas Cognitivo</h1>
+          <p>Planeje seus movimentos com calma e atenção.</p>
+          <div class="checkers-actions" aria-label="Controles do jogo">
+            <button class="btn" id="new-checkers-game" type="button">Novo jogo</button>
+            <button class="btn btn-secondary" id="hint-checkers" type="button">Dica</button>
+          </div>
+          <div class="checkers-stats">
+            <div><strong>Turno</strong><span id="turn-label">Jogador</span></div>
+            <div><strong>Tempo</strong><span id="game-time">00:00</span></div>
+          </div>
+          <div class="checkers-score" aria-label="Peças capturadas">
+            <div><strong>Você capturou</strong><span id="player-captures">0</span></div>
+            <div><strong>Computador capturou</strong><span id="computer-captures">0</span></div>
+          </div>
+          <div id="checkers-status" class="message checkers-message" role="status" aria-live="polite">
+            Escolha uma peça para começar.
+          </div>
+        </div>
+        <div class="card checkers-board-card">
+          <div id="checkers-board" class="checkers-board" aria-label="Tabuleiro de Damas"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="damas.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividamente - Genius Cognitivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" aria-label="Vividamente - Início">
+      <img src="assets/logo-vividamente.png" alt="">
+      <span>Vividamente</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="progresso.html">Progresso</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="ajuda.html">Ajuda</a></li>
+        <li><a href="avaliacao.php">Avaliação</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <a href="jogos.html" class="btn back-btn">Voltar</a>
+      <section class="genius-shell" aria-labelledby="genius-title">
+        <div class="genius-panel">
+          <h1 id="genius-title">Genius Cognitivo</h1>
+          <p>Observe a sequência de cores e repita no seu tempo.</p>
+          <div class="genius-level-card" aria-label="Rodada atual">
+            <span>Nível Atual</span>
+            <strong id="round-count">0</strong>
+          </div>
+          <div class="genius-board" aria-label="Botões coloridos do Genius">
+            <button class="genius-pad genius-red" type="button" data-color="red" aria-label="Vermelho"><span>Vermelho</span></button>
+            <button class="genius-pad genius-green" type="button" data-color="green" aria-label="Verde"><span>Verde</span></button>
+            <button class="genius-pad genius-yellow" type="button" data-color="yellow" aria-label="Amarelo"><span>Amarelo</span></button>
+            <button class="genius-pad genius-blue" type="button" data-color="blue" aria-label="Azul"><span>Azul</span></button>
+            <div class="genius-center" aria-hidden="true">GENIUS</div>
+          </div>
+          <div class="genius-actions" aria-label="Controles do jogo">
+            <button class="btn" id="start-game" type="button">Começar jogo</button>
+            <button class="btn btn-secondary" id="restart-game" type="button">Reiniciar</button>
+          </div>
+          <div class="genius-score" aria-label="Maior pontuação">
+            <strong>Recorde</strong>
+            <span id="best-score">0</span>
+          </div>
+          <div id="genius-status" class="message genius-message" role="status" aria-live="polite">
+            Clique em Começar jogo quando estiver pronto.
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="genius.js"></script>
+</body>
+</html>

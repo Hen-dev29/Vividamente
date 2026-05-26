@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividamente - Palavras Cruzadas Cognitivas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" aria-label="Vividamente - Início">
+      <img src="assets/logo-vividamente.png" alt="">
+      <span>Vividamente</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="progresso.html">Progresso</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="ajuda.html">Ajuda</a></li>
+        <li><a href="avaliacao.php">Avaliação</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <a href="jogos.html" class="btn back-btn">Voltar</a>
+      <section class="crossword-layout" aria-labelledby="crossword-title">
+        <div class="card crossword-info">
+          <h1 id="crossword-title">Palavras Cruzadas Cognitivas</h1>
+          <p>Leia as pistas e complete as palavras com calma.</p>
+          <div class="crossword-actions" aria-label="Controles do jogo">
+            <button class="btn" id="new-crossword" type="button">Novo jogo</button>
+            <button class="btn btn-secondary" id="check-crossword" type="button">Verificar respostas</button>
+            <button class="btn btn-secondary" id="hint-crossword" type="button">Mostrar dica</button>
+          </div>
+          <div class="crossword-stats">
+            <div><strong>Tempo</strong><span id="crossword-time">00:00</span></div>
+            <div><strong>Concluídas</strong><span><span id="crossword-completed">0</span>/<span id="crossword-total">0</span></span></div>
+          </div>
+          <div id="crossword-status" class="message crossword-message" role="status" aria-live="polite">
+            Leia as pistas e complete as palavras no seu tempo.
+          </div>
+        </div>
+        <div class="card crossword-clues-card">
+          <h2>Pistas horizontais</h2>
+          <ol class="crossword-clues" id="across-clues"></ol>
+          <h2>Pistas verticais</h2>
+          <ol class="crossword-clues" id="down-clues"></ol>
+        </div>
+        <div class="card crossword-board-card">
+          <div id="crossword-grid" class="crossword-grid" aria-label="Grade de palavras cruzadas"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="palavrascruzadas.js"></script>
+</body>
+</html>

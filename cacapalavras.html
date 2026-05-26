@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividamente - Caça-Palavras Cognitivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" aria-label="Vividamente - Início">
+      <img src="assets/logo-vividamente.png" alt="">
+      <span>Vividamente</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="progresso.html">Progresso</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="ajuda.html">Ajuda</a></li>
+        <li><a href="avaliacao.php">Avaliação</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <a href="jogos.html" class="btn back-btn">Voltar</a>
+      <section class="word-search-layout" aria-labelledby="word-search-title">
+        <div class="card word-search-info">
+          <h1 id="word-search-title">Caça-Palavras Cognitivo</h1>
+          <p>Encontre as palavras escondidas com calma e atenção.</p>
+          <button class="btn" id="new-word-game" type="button">Novo jogo</button>
+          <div class="word-search-progress">
+            <strong>Palavras encontradas:</strong>
+            <span><span id="words-found">0</span>/<span id="words-total">0</span></span>
+          </div>
+          <div>
+            <h2>Palavras para encontrar</h2>
+            <ul class="word-list" id="word-list"></ul>
+          </div>
+          <div id="word-status" class="message word-message" role="status" aria-live="polite">
+            Procure as palavras no seu tempo.
+          </div>
+        </div>
+        <div class="card word-board-card">
+          <div class="word-grid" id="word-grid" aria-label="Grade de letras do Caça-Palavras"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="cacapalavras.js"></script>
+</body>
+</html>

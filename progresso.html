@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividamente - Progresso do Usuário</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" aria-label="Vividamente - Início">
+      <img src="assets/logo-vividamente.png" alt="">
+      <span>Vividamente</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="progresso.html">Progresso</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="ajuda.html">Ajuda</a></li>
+        <li><a href="avaliacao.php">Avaliação</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Sua jornada de evolução</h1>
+      <div class="progress-grid">
+        <div class="progress-card">
+          <h4>Jogos concluídos</h4>
+          <p><strong>12</strong> jogos</p>
+        </div>
+        <div class="progress-card">
+          <h4>Tempo de reação médio</h4>
+          <p><strong>2,3s</strong></p>
+        </div>
+        <div class="progress-card">
+          <h4>Sequência de dias jogando</h4>
+          <p><strong>5</strong> dias consecutivos</p>
+        </div>
+        <div class="progress-card">
+          <h4>Nível de memória</h4>
+          <p><strong>Avançado</strong></p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Evolução semanal</h2>
+        <canvas id="evolutionChart" class="progress-chart" aria-label="Gráfico de evolução semanal" role="img"></canvas>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('evolutionChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+        datasets: [{
+          label: 'Pontuação',
+          data: [3, 4, 2, 5, 6, 4, 5],
+          backgroundColor: 'rgba(26, 82, 118, 0.7)',
+          borderColor: 'rgba(26, 82, 118, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 1, color: '#0D1B2A', font: { size: 14 } }
+          },
+          x: {
+            ticks: { color: '#0D1B2A', font: { size: 14 } }
+          }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+  </script>
+</body>
+</html>
