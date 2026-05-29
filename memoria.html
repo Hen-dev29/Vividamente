@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividamente - Jogo da Memória</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" aria-label="Vividamente - In&iacute;cio">
+      <img src="assets/logo-vividamente.png" alt="">
+      <span>Vividamente</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">In&iacute;cio</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="avaliacao.php">Avalia&ccedil;&atilde;o</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <a href="jogos.html" class="btn back-btn">Voltar</a>
+      <h1>Jogo da Memória</h1>
+      <div class="memory-container">
+        <div><strong>Tentativas:</strong> <span id="attempts">0</span></div>
+        <div id="message" class="message" role="status" aria-live="polite">Bem-vindo! Clique em duas cartas para começar.</div>
+        <div class="memory-board" aria-label="Tabuleiro do jogo da memória"></div>
+      </div>
+    </div>
+  </main>
+  <script src="memoria.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividamente - Jogo da Velha Cognitivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" aria-label="Vividamente - In&iacute;cio">
+      <img src="assets/logo-vividamente.png" alt="">
+      <span>Vividamente</span>
+    </a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">In&iacute;cio</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="avaliacao.php">Avalia&ccedil;&atilde;o</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <a href="jogos.html" class="btn back-btn">Voltar</a>
+      <section class="tic-shell" aria-labelledby="tic-title">
+        <div class="tic-panel">
+          <div class="tic-badge">JOGO DA VELHA</div>
+          <h1 id="tic-title">Jogo da Velha Cognitivo</h1>
+          <p>Escolha uma casa e planeje sua próxima jogada com calma.</p>
+          <div class="tic-turn">
+            <strong>Turno</strong>
+            <span id="tic-turn-label">Jogador X</span>
+          </div>
+          <div id="tic-board" class="tic-board" aria-label="Tabuleiro do Jogo da Velha"></div>
+          <div id="tic-status" class="message tic-message" role="status" aria-live="polite">
+            Sua vez. Escolha uma casa.
+          </div>
+          <button class="btn tic-new-game" id="new-tic-game" type="button">Novo jogo</button>
+          <label class="tic-difficulty" for="tic-difficulty">
+            <span>Dificuldade</span>
+            <select id="tic-difficulty">
+              <option value="easy">Fácil</option>
+              <option value="medium">Médio</option>
+              <option value="hard">Difícil</option>
+            </select>
+          </label>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="jogodavelha.js"></script>
+</body>
+</html>
+
+
+
